@@ -8,9 +8,9 @@ apply plugin: 'kotlin-android'
 
 dependencies {
     implementation "com.squareup.wire:wire-runtime:$wireVersion"
-    implementation "de.hdodenhof:circleimageview:1.3.0"
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
 
-    implementation project(':play-services-auth-api-phone-core')
+    implementation project(':firebase-auth-core')
     implementation project(':play-services-base-core')
     implementation project(':play-services-cast-core')
     implementation project(':play-services-cast-framework-core')
@@ -77,6 +77,11 @@ android {
         multiDexKeepProguard file('multidex-keep.pro')
 
         buildConfigField "String", "SAFETYNET_KEY", "\"${localProperties.get("safetynet.key", "")}\""
+        buildConfigField "String", "RECAPTCHA_SITE_KEY", "\"${localProperties.get("recaptcha.siteKey", "")}\""
+        buildConfigField "String", "RECAPTCHA_SECRET", "\"${localProperties.get("recaptcha.secret", "")}\""
+        buildConfigField "String", "RECAPTCHA_ENTERPRISE_PROJECT_ID", "\"${localProperties.get("recaptchaEnterpreise.projectId", "")}\""
+        buildConfigField "String", "RECAPTCHA_ENTERPRISE_SITE_KEY", "\"${localProperties.get("recaptchaEnterpreise.siteKey", "")}\""
+        buildConfigField "String", "RECAPTCHA_ENTERPRISE_API_KEY", "\"${localProperties.get("recaptchaEnterpreise.apiKey", "")}\""
         buildConfigField "String", "BASE_PACKAGE_NAME", "\"$basePackageName\""
 
         manifestPlaceholders = [

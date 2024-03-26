@@ -19,7 +19,6 @@ def hasModule = (String name, boolean enabledByDefault) -> {
 include ':safe-parcel-processor'
 
 include ':play-services-auth'
-include ':play-services-auth-api-phone'
 include ':play-services-auth-base'
 include ':play-services-base'
 include ':play-services-basement'
@@ -37,6 +36,8 @@ include ':play-services-tasks'
 include ':play-services-api'
 include ':play-services'
 
+include ':firebase-auth'
+
 // core only
 
 include ':play-services-core-proto'
@@ -44,7 +45,6 @@ include ':play-services-core-proto'
 sublude ':play-services-basement:ktx'
 sublude ':play-services-tasks:ktx'
 
-sublude ':play-services-auth-api-phone:core'
 sublude ':play-services-base:core'
 sublude ':play-services-base:core:package'
 sublude ':play-services-cast:core'
@@ -57,6 +57,8 @@ sublude ':play-services-fido:core'
 sublude ':play-services-gmscompliance:core'
 sublude ':play-services-safetynet:core'
 sublude ':play-services-recaptcha:core'
+
+sublude ':firebase-auth:core'
 
 include ':play-services-core:microg-ui-tools' // Legacy
 include ':play-services-core'

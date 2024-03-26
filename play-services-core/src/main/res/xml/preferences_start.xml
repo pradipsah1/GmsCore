@@ -45,10 +45,6 @@
             android:key="pref_snet"
             android:title="@string/service_name_snet" />
         <Preference
-            android:icon="@drawable/ic_shop"
-            android:key="pref_vending"
-            android:title="@string/service_name_vending" />
-        <Preference
             android:icon="@drawable/dots_horizontal"
             android:key="pref_google_more"
             android:title="@string/pref_more_settings"
@@ -57,12 +53,6 @@
                 android:targetClass="org.microg.gms.ui.GoogleMoreFragment$AsActivity"
                 android:targetPackage="@string/var_pref_start_gms_package" />
         </Preference>
-    </PreferenceCategory>
-    <PreferenceCategory android:layout="@layout/preference_category_no_label" android:key="prefcat_other_services">
-        <Preference
-            android:icon="@drawable/ic_map_marker"
-            android:key="pref_location"
-            android:title="@string/service_name_location"/>
     </PreferenceCategory>
     <PreferenceCategory android:layout="@layout/preference_category_no_label" android:key="prefcat_footer">
         <Preference
